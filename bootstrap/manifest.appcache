@@ -1,0 +1,16 @@
+CACHE MANIFEST
+ CACHE:
+index.html
+news.html
+admin.html
+programm.html
+reviews.html
+news1.jpg
+main_pic.png
+index/bootstrap.min.css
+index/bootstrap.min.js
+sticky-footer-navbar.css
+jquery.min.js
+
+ FALLBACK:
+ error.html

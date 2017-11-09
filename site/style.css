@@ -47,6 +47,41 @@ hr {
   text-align: center;
   background: white;
 }
+
+.grow{
+  transition: 0.5s;
+}
+.grow:hover
+{
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.date {
+  color: #394360;
+  font-size: 10pt;
+}
+.news{
+  display: inline-block;
+  margin-bottom: 20px;
+
+}
+.newstitle{
+color: #6d0e5a;
+font-weight: bold
+}
+
+.newsimg {
+   border-radius: 10px;
+   margin-right: 25px;
+   margin-top: 10px;
+}
+.news{
+  float: left;
+}
+
+
 .menu-main li {display: inline-block;}
 .menu-main a {
   text-decoration: none;
