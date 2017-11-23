@@ -9,10 +9,10 @@
     <title>Правові аспекти господарських договорів міжпідприємствами ЄС та не&#8212;ЄС</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="C:/Users/Daria Savinkina/Desktop/study/web/bootstrap/index/bootstrap.min.css" rel="stylesheet">
+    <link href="index/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="C:/Users/Daria Savinkina/Desktop/study/web/bootstrap/index/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="index/sticky-footer-navbar.css" rel="stylesheet">
   </head>
 
   <body>
@@ -73,18 +73,18 @@
                   <h5>Додати заголовок:</h5>
                   <form role="form">
                     <div class="form-group">
-                      <input type="text" placeholder="Заголовок" class="form-control">
+                      <input type="text" placeholder="Заголовок" class="form-control" id="name">
                     </div>
                 </div>
                 <div class="col-lg-12 col-sm-12 col-xs-12">
                 <h5>Додати опис:</h5>
                   <div class="form-group">
-                    <textarea class="form-control" rows="3" placeholder="Короткий опис"></textarea>
+                    <textarea class="form-control" rows="3" placeholder="Короткий опис" id="description"></textarea>
                   </div>
                   <div class="form-group">
-                    <textarea class="form-control" rows="10" placeholder="Довгий опис"></textarea>
+                    <textarea class="form-control" rows="10" placeholder="Довгий опис" id="fulltext"></textarea>
                   </div>
-                  <button type="submit" class="btn btn-secondary">Відправити статтю</button>
+                  <button type="submit" class="btn btn-secondary" onclick="addNews()">Відправити статтю</button>
                   </form>
                 </div>
 
@@ -97,14 +97,34 @@
     </footer>
 
 
+    <script>
+    function addNews(){
+       var newsHeader = document.getElementById("name");
+       var newsShortText = document.getElementById("description");
+       var newsText = document.getElementById("fulltext");
+         if(newsHeader.value == ""){
+         alert("Вкажіть заголовок статті");
+         return;
+         }
+         if(newsShortText.value == ""){
+         alert("Вкажіть короткий опис статті");
+         return;
+         }
+         if(newsText.value == ""){
+         alert("Вкажіть текст статті");
+         return;
+         }
+       }
+	</script>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="C:/Users/Daria Savinkina/Desktop/study/web/bootstrap/index/popper.min.js"></script>
-    <script src="C:/Users/Daria Savinkina/Desktop/study/web/bootstrap/index/bootstrap.min.js"></script>
+    <script src="index/jquery.min.js"></script>
+    <script src="index/popper.min.js"></script>
+    <script src="index/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="C:/Users/Daria Savinkina/Desktop/study/web/bootstrap/index/ie10-viewport-bug-workaround.js"></script>
+    <script src="index/ie10-viewport-bug-workaround.js"></script>
 
 
 </body></html>

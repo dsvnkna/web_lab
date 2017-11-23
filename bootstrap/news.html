@@ -9,10 +9,10 @@
     <title>Правові аспекти господарських договорів міжпідприємствами ЄС та не&#8212;ЄС</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="C:/Users/Daria Savinkina/Desktop/study/web/bootstrap/index/bootstrap.min.css" rel="stylesheet">
+    <link href="index/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="C:/Users/Daria Savinkina/Desktop/study/web/bootstrap/index/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="index/sticky-footer-navbar.css" rel="stylesheet">
   </head>
 
   <body>
@@ -85,15 +85,54 @@
         	&#169; 2017. Дар'я Савінкіна
     </footer>
 
+    <script>
+		function isOnline() {
+			return window.navigator.onLine;
+		}
+		class News{
+			constructor(header, shortText, fullText, image){
+				this.header = header;
+				this.shortText = shortText;
+				this.fullText = fullText;
+				this.image = image;
+			}
+		}
+		function getNews() {
+		    var news = new Array;
+		    var news_item = localStorage.getItem('news');
+		    if (news_item !== null) {
+		        news = JSON.parse(news_item);
+		    }
+		    return news;
+		}
+		function createNews(news){
+			var element = document.getElementById("newsRow");
+			element.innerHTML += '<div class="col-lg-4"> <center><img src = "' + news.image + '" alt = "News" width="300" height = "300"></center><center><h3>'
+			+ news.header + '</h3></center><p>' + news.shortText + '</p></div>'
+		}
+		function show(){
+			if(isOnline()){
+				//server stuff
+			}
+			var news = getNews();
+		    if ((typeof news !== 'undefined') && (news.length > 0)) {
+			    for(var i = 0; i < news.length; i++) {
+		    		createNews(news[i]);
+			    }
+			}
+		}
+		show();
+	</script>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="C:/Users/Daria Savinkina/Desktop/study/web/bootstrap/index/popper.min.js"></script>
-    <script src="C:/Users/Daria Savinkina/Desktop/study/web/bootstrap/index/bootstrap.min.js"></script>
+    <script src="index/jquery.min.js"></script>
+    <script src="index/popper.min.js"></script>
+    <script src="index/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="C:/Users/Daria Savinkina/Desktop/study/web/bootstrap/index/ie10-viewport-bug-workaround.js"></script>
+    <script src="index/ie10-viewport-bug-workaround.js"></script>
 
 
 </body></html>
