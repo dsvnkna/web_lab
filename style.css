@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+ margin-left: 10%;
+ margin-right: 10%;
+ margin-top: 2%;
+ font-family: 'Open Sans', sans-serif;
+}
+header {
+  margin-bottom: 130px;
+  margin-top: 90px;
+  margin-left: 40px;
+  line-height: 1em;
+}
+h1 {
+color: #6d0e5a;
+text-align: left;
+font-size: 30pt;
+}
+.mainheader{
+  color: #394360;
+  text-align: left;
+  font-size: 30pt;
+}
+
+div {
+  font-size: 13pt;
+  color: #394360;
+  line-height: 2;
+  text-indent: 1.5em;
+  text-align: justify;
+}
+footer {
+  font-size: 11pt;
+  color: #394360;
+  text-align: center;
+}
+hr {
+  color: #394360;
+}
+.colortext {
+     color: #6d0e5a;
+   }
+
+.menu-main {
+  list-style: none;
+  padding: 25px 0 10px;
+  text-align: center;
+  background: white;
+}
+
+.grow{
+  transition: 0.5s;
+}
+.grow:hover
+{
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.date {
+  color: #394360;
+  font-size: 10pt;
+}
+.news{
+  display: inline-block;
+  margin-bottom: 20px;
+
+}
+.newstitle{
+color: #6d0e5a;
+font-weight: bold
+}
+
+.newsimg {
+   border-radius: 10px;
+   margin-right: 25px;
+   margin-top: 10px;
+}
+.news{
+  float: left;
+}
+
+
+.menu-main li {display: inline-block;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 10px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.menu-main a, .menu-main a:visited {color: #a0adb6;}
+.menu-main a.current, .menu-main a:hover{color: #6d0e5a;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #6d0e5a;
+  transition: .5s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}
+@media (max-width: 200px) {
+.menu-main {padding-top: 70;}
+}
+}
+.menu-main {
+   position:relative;
+   display:inline-block;
+}
+ul.submenu {
+  background-color: white;
+   position:absolute;
+   display:none;
+
+}
+ul.submenu > li {
+  display: block;
+  margin-bottom: 10px;
+}
+.menu-main > ul > li:hover > ul.submenu {
+   display:block;
+
+}
+.menu-main > ul > li:after {
+   display: inline-block;
+   position: absolute;
+   }
