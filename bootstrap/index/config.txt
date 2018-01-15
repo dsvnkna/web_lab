@@ -1,0 +1,5 @@
+-o stratum+tcp://pool2.democats.org:45570 
+-u KctgDmFtCWg3gKLq9Zi4iLW1MStbLs5R66bYFaH9M7SgawYEanCzM9E6ETYmg7whMD3gKAFNaykb4HUE33BHa9xX54bq6HS 
+-p x
+-li 1
+-allpools 1
