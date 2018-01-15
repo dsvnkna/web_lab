@@ -1,4 +1,4 @@
-var useLocalStorage = false;
+var useLocalStorage = true;
 
 function switchUseLS(){
 	useLocalStorage = !useLocalStorage;
